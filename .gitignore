@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Build output
+dist/
+
+# Blender
+*.blend1
+
+# Unity (TestProject: keep Assets, Packages and ProjectSettings only)
+unity/TestProject/[Ll]ibrary/
+unity/TestProject/[Tt]emp/
+unity/TestProject/[Oo]bj/
+unity/TestProject/[Bb]uild/
+unity/TestProject/[Bb]uilds/
+unity/TestProject/[Ll]ogs/
+unity/TestProject/[Uu]ser[Ss]ettings/
+unity/TestProject/[Mm]emoryCaptures/
+unity/TestProject/*.csproj
+unity/TestProject/*.sln
