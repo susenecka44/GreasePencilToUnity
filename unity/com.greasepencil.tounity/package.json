@@ -1,0 +1,12 @@
+{
+  "name": "com.greasepencil.tounity",
+  "version": "0.1.0",
+  "displayName": "Grease Pencil to Unity",
+  "description": "Imports .gpencil files exported from Blender 5 Grease Pencil. Builds camera-facing ribbon meshes from the curve points and their radii, a URP shader that shades them as puffed tubes without casting shadows, and AnimationClips for keyframed or baked Grease Pencil animation.",
+  "unity": "6000.0",
+  "keywords": ["blender", "grease pencil", "2d", "stroke", "urp"],
+  "author": { "name": "vondraju" },
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "17.0.0"
+  }
+}

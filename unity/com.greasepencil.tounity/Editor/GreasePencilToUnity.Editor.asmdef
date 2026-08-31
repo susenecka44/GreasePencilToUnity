@@ -1,0 +1,7 @@
+{
+  "name": "GreasePencilToUnity.Editor",
+  "rootNamespace": "GreasePencilToUnity.Editor",
+  "references": ["GreasePencilToUnity.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

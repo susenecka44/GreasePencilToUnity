@@ -1,0 +1,6 @@
+{
+  "name": "GreasePencilToUnity.Runtime",
+  "rootNamespace": "GreasePencilToUnity",
+  "references": [],
+  "autoReferenced": true
+}
