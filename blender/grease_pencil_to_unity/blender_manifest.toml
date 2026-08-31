@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+
+id = "grease_pencil_to_unity"
+version = "0.1.0"
+name = "Grease Pencil to Unity"
+tagline = "Export Grease Pencil strokes, widths and colours to Unity"
+maintainer = "vondraju"
+type = "add-on"
+
+license = ["SPDX:MIT"]
+website = "https://github.com/vondraju/GreasePencilToUnity"
+
+blender_version_min = "5.0.0"
