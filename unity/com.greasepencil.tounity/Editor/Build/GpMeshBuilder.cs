@@ -106,7 +106,7 @@ namespace GreasePencilToUnity.Editor
             }
 
             var vertices = new List<GpVertex>(data.PointCount * 2 + 64);
-            var indices = new List<int>[Mathf.Max(layout.Count, 1)];
+            var indices = new List<int>[layout.Count];
             for (int i = 0; i < indices.Length; i++)
             {
                 indices[i] = new List<int>();
@@ -336,8 +336,8 @@ namespace GreasePencilToUnity.Editor
                 // count still has to match the layer's material array.
                 mesh.SetVertexBufferParams(0, Layout);
                 mesh.SetIndexBufferParams(0, IndexFormat.UInt32);
-                mesh.subMeshCount = Mathf.Max(submeshCount, 1);
-                for (int i = 0; i < mesh.subMeshCount; i++)
+                mesh.subMeshCount = submeshCount;
+                for (int i = 0; i < submeshCount; i++)
                 {
                     mesh.SetSubMesh(i, new SubMeshDescriptor(0, 0), MeshUpdateFlags.DontRecalculateBounds);
                 }
@@ -357,7 +357,7 @@ namespace GreasePencilToUnity.Editor
             }
 
             var indexArray = new int[total];
-            var descriptors = new SubMeshDescriptor[Mathf.Max(submeshCount, 1)];
+            var descriptors = new SubMeshDescriptor[submeshCount];
             int cursor = 0;
             for (int i = 0; i < indices.Length; i++)
             {

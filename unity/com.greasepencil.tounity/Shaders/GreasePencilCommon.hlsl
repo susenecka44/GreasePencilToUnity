@@ -43,6 +43,15 @@ CBUFFER_START(UnityPerMaterial)
     float  _Cutoff;
     float  _Softness;
     float  _ScreenWidthScale;
+    // Declared in Properties and therefore required here too, or the shader
+    // drops out of the SRP Batcher.
+    float  _AlphaClip;
+    float  _ScreenSpaceWidth;
+    float  _SrcBlend;
+    float  _DstBlend;
+    float  _BlendOp;
+    float  _ZWrite;
+    float  _Cull;
 CBUFFER_END
 
 // Direction from the surface towards the camera, in object space.

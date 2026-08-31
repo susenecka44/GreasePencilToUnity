@@ -31,6 +31,9 @@ namespace GreasePencilToUnity.Editor
 
         /// <summary>One mesh per entry in <c>Layer.frame_times</c>; null where nothing is drawn.</summary>
         public Mesh[] Meshes;
+
+        /// <summary>How many distinct meshes this layer contributed, for the import summary.</summary>
+        public int MeshCount;
     }
 
     public static class GpClipBuilder

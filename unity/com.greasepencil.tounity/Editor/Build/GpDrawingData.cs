@@ -27,7 +27,13 @@ namespace GreasePencilToUnity.Editor
 
         public GpCurveFlags FlagsOf(int curve) => (GpCurveFlags)Flags[curve];
 
-        public static GpDrawingData Read(GpFile file, GpDrawing drawing)
+        /// <summary>
+        /// Read one drawing.  Colours are exported in linear space, which is what
+        /// a Linear colour space project wants.  In a Gamma project Unity passes
+        /// shader output to the display untouched, so encode them instead --
+        /// otherwise strokes come out darker and more saturated than in Blender.
+        /// </summary>
+        public static GpDrawingData Read(GpFile file, GpDrawing drawing, bool encodeToGamma = false)
         {
             var data = new GpDrawingData
             {
@@ -41,8 +47,8 @@ namespace GreasePencilToUnity.Editor
                 FillTris = file.Ints(drawing.fill_tris),
                 Radius = file.Floats(drawing.points.radius),
                 Position = ToVectors(file.Floats(drawing.points.position)),
-                Color = ToColors(file.Floats(drawing.points.color)),
-                FillColor = ToColors(file.Floats(drawing.curves.fill_color)),
+                Color = ToColors(file.Floats(drawing.points.color), encodeToGamma),
+                FillColor = ToColors(file.Floats(drawing.curves.fill_color), encodeToGamma),
             };
             return data;
         }
@@ -58,16 +64,29 @@ namespace GreasePencilToUnity.Editor
             return result;
         }
 
-        private static Color[] ToColors(float[] values)
+        private static Color[] ToColors(float[] values, bool encodeToGamma)
         {
             var result = new Color[values.Length / 4];
             for (int i = 0; i < result.Length; i++)
             {
-                result[i] = new Color(
+                var color = new Color(
                     values[i * 4], values[i * 4 + 1], values[i * 4 + 2], values[i * 4 + 3]);
+                // Alpha is never colour managed.
+                result[i] = encodeToGamma
+                    ? new Color(Encode(color.r), Encode(color.g), Encode(color.b), color.a)
+                    : color;
             }
 
             return result;
+        }
+
+        /// <summary>Linear to sRGB, the transform Blender's display applies.</summary>
+        private static float Encode(float value)
+        {
+            value = Mathf.Max(value, 0f);
+            return value <= 0.0031308f
+                ? value * 12.92f
+                : 1.055f * Mathf.Pow(value, 1f / 2.4f) - 0.055f;
         }
     }
 }
