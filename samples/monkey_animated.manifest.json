@@ -1,0 +1,1060 @@
+{
+ "scene": {
+  "fps": 24.0,
+  "frame_start": 1,
+  "frame_end": 24
+ },
+ "object": {
+  "name": "Suzanne",
+  "matrix": [
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ],
+  "depth_order": "2D"
+ },
+ "materials": [
+  {
+   "name": "Black",
+   "show_stroke": true,
+   "show_fill": false,
+   "stroke_color": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "fill_color": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mode": "LINE",
+   "holdout": false
+  },
+  {
+   "name": "Eyes",
+   "show_stroke": false,
+   "show_fill": true,
+   "stroke_color": [
+    0.2664174735546112,
+    0.12596741318702698,
+    0.05751832202076912,
+    0.0
+   ],
+   "fill_color": [
+    0.6865778565406799,
+    0.4814434051513672,
+    0.3173809051513672,
+    1.0
+   ],
+   "mode": "LINE",
+   "holdout": false
+  },
+  {
+   "name": "Pupils",
+   "show_stroke": false,
+   "show_fill": true,
+   "stroke_color": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "fill_color": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "mode": "LINE",
+   "holdout": false
+  },
+  {
+   "name": "Skin",
+   "show_stroke": false,
+   "show_fill": true,
+   "stroke_color": [
+    0.49642884731292725,
+    0.28355488181114197,
+    0.1071564182639122,
+    1.0
+   ],
+   "fill_color": [
+    0.5147662162780762,
+    0.21589697897434235,
+    0.06281454861164093,
+    1.0
+   ],
+   "mode": "LINE",
+   "holdout": false
+  },
+  {
+   "name": "Skin_light",
+   "show_stroke": true,
+   "show_fill": false,
+   "stroke_color": [
+    0.8154009580612183,
+    0.6506069898605347,
+    0.3609374463558197,
+    1.0
+   ],
+   "fill_color": [
+    0.8133829236030579,
+    0.6523786783218384,
+    0.36345335841178894,
+    0.0
+   ],
+   "mode": "LINE",
+   "holdout": false
+  },
+  {
+   "name": "Skin_shadow",
+   "show_stroke": true,
+   "show_fill": false,
+   "stroke_color": [
+    0.08460839837789536,
+    0.06838487088680267,
+    0.04108130559325218,
+    0.5
+   ],
+   "fill_color": [
+    0.08353512734174728,
+    0.06838487088680267,
+    0.04072881489992142,
+    0.30000001192092896
+   ],
+   "mode": "LINE",
+   "holdout": false
+  }
+ ],
+ "layers": [
+  {
+   "name": "Fills",
+   "opacity": 1.0,
+   "blend_mode": "REGULAR",
+   "tint_color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "tint_factor": 0.0,
+   "radius_offset": 0.0,
+   "use_lights": true,
+   "hide": false,
+   "frame_times": [
+    1,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24
+   ],
+   "frame_drawings": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Lines",
+   "opacity": 1.0,
+   "blend_mode": "REGULAR",
+   "tint_color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "tint_factor": 0.0,
+   "radius_offset": 0.0,
+   "use_lights": true,
+   "hide": false,
+   "frame_times": [
+    1,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24
+   ],
+   "frame_drawings": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13
+   ]
+  }
+ ],
+ "drawings": [
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 0,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 8400,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 11200,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 22400,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 22456,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 22508,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 22524,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 22576,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 22784,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 22888,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 27232,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 33424,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 35488,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 43744,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 43808,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 43868,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 43884,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 43944,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 44184,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 44304,
+    "count": 144,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 44880,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 53280,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 56080,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 67280,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 67336,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 67388,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 67404,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 67456,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 67664,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 67768,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 72112,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 78304,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 80368,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 88624,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 88688,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 88748,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 88764,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 88824,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 89064,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 89184,
+    "count": 144,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 89760,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 98160,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 100960,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 112160,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 112216,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 112268,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 112284,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 112336,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 112544,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 112648,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 116992,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 123184,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 125248,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 133504,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 133568,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 133628,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 133644,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 133704,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 133944,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 134064,
+    "count": 144,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 134640,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 143040,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 145840,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 157040,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 157096,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 157148,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 157164,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 157216,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 157424,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 157528,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 161872,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 168064,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 170128,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 178384,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 178448,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 178508,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 178524,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 178584,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 178824,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 178944,
+    "count": 150,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 179544,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 187944,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 190744,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 201944,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 202000,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 202052,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 202068,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 202120,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 202328,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 202432,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 206776,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 212968,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 215032,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 223288,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 223352,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 223412,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 223428,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 223488,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 223728,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 223848,
+    "count": 150,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 224448,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 232848,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 235648,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 246848,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 246904,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 246956,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 246972,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 247024,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 247232,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 247336,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 251680,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 257872,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 259936,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 268192,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 268256,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 268316,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 268332,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 268392,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 268632,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 268752,
+    "count": 144,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 700,
+   "n_curves": 13,
+   "points": {
+    "position": {
+     "offset": 269328,
+     "count": 2100,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 277728,
+     "count": 700,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 280528,
+     "count": 2800,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 291728,
+     "count": 14,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 291784,
+     "count": 13,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 291836,
+     "count": 13,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 291852,
+     "count": 13,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 291904,
+     "count": 52,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 292112,
+     "count": 26,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 292216,
+    "count": 1086,
+    "type": "i32"
+   }
+  },
+  {
+   "n_points": 516,
+   "n_curves": 15,
+   "points": {
+    "position": {
+     "offset": 296560,
+     "count": 1548,
+     "type": "f32"
+    },
+    "radius": {
+     "offset": 302752,
+     "count": 516,
+     "type": "f32"
+    },
+    "color": {
+     "offset": 304816,
+     "count": 2064,
+     "type": "f32"
+    }
+   },
+   "curves": {
+    "offsets": {
+     "offset": 313072,
+     "count": 16,
+     "type": "i32"
+    },
+    "material": {
+     "offset": 313136,
+     "count": 15,
+     "type": "i32"
+    },
+    "flags": {
+     "offset": 313196,
+     "count": 15,
+     "type": "u8"
+    },
+    "softness": {
+     "offset": 313212,
+     "count": 15,
+     "type": "f32"
+    },
+    "fill_color": {
+     "offset": 313272,
+     "count": 60,
+     "type": "f32"
+    },
+    "fill_tri_range": {
+     "offset": 313512,
+     "count": 30,
+     "type": "i32"
+    }
+   },
+   "fill_tris": {
+    "offset": 313632,
+    "count": 144,
+    "type": "i32"
+   }
+  }
+ ],
+ "animation": {
+  "mode": "BAKE",
+  "step": 1,
+  "times": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24
+  ],
+  "matrices": {
+   "offset": 314208,
+   "count": 384,
+   "type": "f32"
+  }
+ }
+}
