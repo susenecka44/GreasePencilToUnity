@@ -20,30 +20,6 @@ exactly; the remaining difference is antialiasing along stroke edges.
 | Blender | 5.0+ (Grease Pencil v3) |
 | Unity | 6000.0+ with the Universal Render Pipeline |
 
-## How it works
-
-Nothing is converted to curves or meshes inside Blender. The add-on reads the
-drawing attributes straight out of Grease Pencil — `position`, `radius`,
-`opacity`, `vertex_color`, `cyclic`, `material_index` and the rest — folds the
-material colour, per-point vertex colour, opacity and layer tint into one RGBA
-per point, and writes it all to a compact binary `.gpencil` file.
-
-Unity's importer builds a mesh holding only the **centreline**: two vertices per
-curve point. The shader pushes them apart sideways, towards the camera, by the
-point's radius. That is how Blender draws Grease Pencil, so the strokes look
-right from any angle, keep their width when you orbit, and the meshes stay
-small enough to swap per frame.
-
-```
-Blender                          .gpencil                    Unity
--------                          --------                    -----
-layer -> frame -> drawing        manifest (JSON)             root GameObject
-  position, radius, opacity  ->  + binary blob           ->    one child per layer
-  vertex_color, material                                       ribbon mesh per drawing
-  fills, caps, blend mode                                      URP material per layer
-  object transform                                             AnimationClip
-```
-
 ## Install
 
 **Blender.** Build the extension and install the zip:
@@ -51,6 +27,9 @@ layer -> frame -> drawing        manifest (JSON)             root GameObject
 ```bash
 python blender/build_extension.py
 ```
+
+*(if you are not skilled with computers, just download build from the `blender` folder)*
+
 
 Then in Blender: Edit ▸ Preferences ▸ Get Extensions ▸ ⌄ ▸ Install from Disk,
 and pick `dist/grease_pencil_to_unity-0.1.0.zip`.
@@ -115,40 +94,29 @@ colours. The exporter writes the flat colours, the ones the viewport shows.
 Unity's **Light Influence** is what reproduces the lit case, and layers with
 Use Lights off in Blender stay flat there too.
 
-## Testing
+## How it works
 
-The Blender side has a headless round-trip check:
+Nothing is converted to curves or meshes inside Blender. The add-on reads the
+drawing attributes straight out of Grease Pencil — `position`, `radius`,
+`opacity`, `vertex_color`, `cyclic`, `material_index` and the rest — folds the
+material colour, per-point vertex colour, opacity and layer tint into one RGBA
+per point, and writes it all to a compact binary `.gpencil` file.
 
-```bash
-blender --background --factory-startup --python blender/tests/export_smoke.py
+Unity's importer builds a mesh holding only the **centreline**: two vertices per
+curve point. The shader pushes them apart sideways, towards the camera, by the
+point's radius. That is how Blender draws Grease Pencil, so the strokes look
+right from any angle, keep their width when you orbit, and the meshes stay
+small enough to swap per frame.
+
 ```
-
-Regenerate the sample fixtures in `samples/`:
-
-```bash
-blender --background --factory-startup --python blender/tests/make_samples.py
+Blender                          .gpencil                    Unity
+-------                          --------                    -----
+layer -> frame -> drawing        manifest (JSON)             root GameObject
+  position, radius, opacity  ->  + binary blob           ->    one child per layer
+  vertex_color, material                                       ribbon mesh per drawing
+  fills, caps, blend mode                                      URP material per layer
+  object transform                                             AnimationClip
 ```
-
-`make_puff_sample.py` writes a thick-stroke sample, and `render_reference.py`
-renders the Blender side of the comparison above:
-
-```bash
-blender --background --factory-startup --python blender/tests/make_puff_sample.py
-```
-
-`unity/TestProject` is a Unity 6 URP project that references the package from
-disk. Open it and run **Grease Pencil ▸ Set Up Test Scene**, then **Grease
-Pencil ▸ Verify Import**. Both also run in batch mode:
-
-```bash
-Unity -batchmode -quit -projectPath unity/TestProject -executeMethod GreasePencilTestBootstrap.Verify
-```
-
-`Verify` checks that both samples build meshes with matching submesh and
-material counts, that nothing casts shadows, that bounds are padded for the
-width the shader adds, and that both playback modes produce working animation.
-**Grease Pencil ▸ Render Preview** and **▸ Render Puff Comparison** write the
-images above; run those with a graphics device, so without `-nographics`.
 
 ## Known limits
 
